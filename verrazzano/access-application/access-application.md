@@ -227,7 +227,7 @@ Verrazzano installs several consoles. The endpoints for an installation are stor
 
     ![Dashboard](images/37.png " ")
 
-## Task 3: Explore the Kiali Console
+## Task 4: Explore the Kiali Console
 
 1. Go to Verrazzao console and click on the link for Kiali Console.
 

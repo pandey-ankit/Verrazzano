@@ -285,7 +285,7 @@ Please copy and paste the block of commands into the *Cloud Shell*.
 
     ![app](images/21.png " ")
 
-7. Wait for all of the pods in the Bob’s Books example application to be in the *Running* state. You may need to repeat this command several times before it is successful. The WebLogic Server and Coherence pods may take a while to be created and Ready. This *kubectl* command will wait for all the pods to be in the *Running* state within the bobs-books namespace. It takes around 4-5 minutes. If you are waiting for more then 5 minutes, then you can re-run the commands again.
+7. Wait for all of the pods in the Bob’s Books example application to be in the *Running* state. You may need to repeat this command several times before it is successful. The WebLogic Server and Coherence pods may take a while to be created and Ready. This *kubectl* command will wait for all the pods to be in the *Running* state within the bobs-books namespace. It takes around 4-5 minutes. If you are waiting for more then 5 minutes, then you can re-run the command again.
 
     ```bash
     <copy>kubectl wait --for=condition=Ready pods --all -n bobs-books --timeout=600s</copy>
