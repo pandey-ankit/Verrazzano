@@ -227,6 +227,30 @@ Verrazzano installs several consoles. The endpoints for an installation are stor
 
     ![Dashboard](images/37.png " ")
 
+## Task 3: Explore the Kiali Console
+
+1. Go to Verrazzao console and click on the link for Kiali Console.
+
+   ![Dashboard](images/43.png " ")
+
+2. On Left side, Click on Graph.
+
+   ![Dashboard](images/44.png " ")
+
+3. In the Namespace dropdown, check the box for *bobs-books* and make the curser move outside the dropdown. 
+   ![Dashboard](images/45.png " ")
+
+4. You can view the graphical view of *bobs-books* application. Click *Legend* to view the *Legend* view.
+
+   ![Dashboard](images/46.png " ")
+
+5. Here you can view, what each shapes represents, like circle represents the *Workloads*.
+
+   ![Dashboard](images/47.png " ")
+
+6. On Left side, Click on *Applications*.
+
+   ![Dashboard](images/48.png " ")
 
 
 Leave the *Cloud Shell* open; we will use it for upcoming labs.

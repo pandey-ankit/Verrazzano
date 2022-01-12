@@ -83,21 +83,21 @@ In this lab, you will:
 
 1. Select *Home* to go back to the Verrazzano Home Page.
 
-    ![Home](images/9.png " ")
+    ![Home](images/13.png " ")
 
 2. Select the link for Grafana to open the *Grafana Console*.
 
-    ![Grafana](images/10.png " ")
+    ![Grafana](images/9.png " ")
 
 3. Select Home, as shown, type *Helidon*, and then select *Helidon Monitoring Dashboard*.
 
-    ![Helidon](images/11.png " ")
+    ![Helidon](images/10.png " ")
 
-    ![Helidon Dashboard](images/12.png " ")
+    ![Helidon Dashboard](images/11.png " ")
 
 4. In the ServiceID, select *bobs-books_default_bobs-books_bobby-helidon* and in the instance, select the newly created instance. In this case, you will get information for the modified *bobby-helidon-stock-application*.
 
-    ![New Component](images/13.png " ")
+    ![New Component](images/12.png " ")
 
 Congratulations!
 

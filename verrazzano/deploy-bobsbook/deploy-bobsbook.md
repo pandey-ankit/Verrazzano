@@ -285,27 +285,28 @@ Please copy and paste the block of commands into the *Cloud Shell*.
 
     ![app](images/21.png " ")
 
-7. Wait for all of the pods in the Bob’s Books example application to be in the *Running* state. You may need to repeat this command several times before it is successful. The WebLogic Server and Coherence pods may take a while to be created and Ready. This *kubectl* command will wait for all the pods to be in the *Running* state within the bobs-books namespace. It takes around 4-5 minutes.
+7. Wait for all of the pods in the Bob’s Books example application to be in the *Running* state. You may need to repeat this command several times before it is successful. The WebLogic Server and Coherence pods may take a while to be created and Ready. This *kubectl* command will wait for all the pods to be in the *Running* state within the bobs-books namespace. It takes around 4-5 minutes. If you are waiting for more then 5 minutes, then you can re-run the commands again.
 
     ```bash
     <copy>kubectl wait --for=condition=Ready pods --all -n bobs-books --timeout=600s</copy>
     ```
 
     The output should be similar to the following:
-```bash
-$ kubectl wait --for=condition=Ready pods --all -n bobs-books --timeout=600s
-  pod/bobbys-coherence-0 condition met
-  pod/bobbys-front-end-adminserver condition met
-  pod/bobbys-front-end-managed-server1 condition met
-  pod/bobbys-helidon-stock-application-5f74cbcc8b-cw4x4 condition met
-  pod/bobs-bookstore-adminserver condition met
-  pod/bobs-bookstore-managed-server1 condition met
-  pod/mysql-6bc8f9f785-n4qjh condition met
-  pod/robert-helidon-65b8874988-7x5vj condition met
-  pod/robert-helidon-65b8874988-vnntp condition met
-  pod/roberts-coherence-0 condition met
-  pod/roberts-coherence-1 condition met
-```
+    ```bash
+      $ kubectl wait --for=condition=Ready pods --all -n bobs-books --timeout=600s
+      pod/bobbys-coherence-0 condition met
+      pod/bobbys-front-end-adminserver condition met
+      pod/bobbys-front-end-managed-server1 condition met
+      pod/bobbys-helidon-stock-application-5f74cbcc8b-cw4x4 condition met
+      pod/bobs-bookstore-adminserver condition met
+      pod/bobs-bookstore-managed-server1 condition met
+      pod/mysql-6bc8f9f785-n4qjh condition met
+      pod/robert-helidon-65b8874988-7x5vj condition met
+      pod/robert-helidon-65b8874988-vnntp condition met
+      pod/roberts-coherence-0 condition met
+      pod/roberts-coherence-1 condition met
+      $
+    ```
 
 8. Get the `EXTERNAL_IP` address of the istio-ingressgateway service. Copy this `EXTERNAL_IP` in your text editor; we will use it in many places, so you can directly copy it from your text editor.
 
@@ -384,4 +385,4 @@ Leave the *Cloud Shell* open; we will use it for the next labs as well.
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Kamryn Vinson, July 2021
+* **Last Updated By/Date** - Kamryn Vinson, January 2022

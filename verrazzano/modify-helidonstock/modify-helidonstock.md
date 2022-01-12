@@ -96,8 +96,8 @@ You should have a text editor, where you can paste the commands and URLs and mod
 
         [INFO]
         [INFO] --- maven-install-plugin:2.4:install (default-install) @ bobbys-coherence ---
-        [INFO] Installing /home/monica_ric/examples/bobs-books/bobbys-books/bobbys-coherence/target/bobbys-coherence.jar to /home/monica_ric/.m2/repository/io/verrazzano/example/books/bobbys-coherence/1.0-SNAPSHOT/bobbys-coherence-1.0-SNAPSHOT.jar
-        [INFO] Installing /home/monica_ric/examples/bobs-books/bobbys-books/bobbys-coherence/pom.xml to /home/monica_ric/.m2/repository/io/verrazzano/example/books/bobbys-coherence/1.0-SNAPSHOT/bobbys-coherence-1.0-SNAPSHOT.pom
+        [INFO] Installing /home/user/examples/bobs-books/bobbys-books/bobbys-coherence/target/bobbys-coherence.jar to /home/user/.m2/repository/io/verrazzano/example/books/bobbys-coherence/1.0-SNAPSHOT/bobbys-coherence-1.0-SNAPSHOT.jar
+        [INFO] Installing /home/user/examples/bobs-books/bobbys-books/bobbys-coherence/pom.xml to /home/user/.m2/repository/io/verrazzano/example/books/bobbys-coherence/1.0-SNAPSHOT/bobbys-coherence-1.0-SNAPSHOT.pom
         [INFO] ------------------------------------------------------------------------
         [INFO] BUILD SUCCESS
         [INFO] ------------------------------------------------------------------------

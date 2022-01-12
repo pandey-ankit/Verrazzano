@@ -43,7 +43,7 @@ Before installing Verrazzano, we need to install the Verrazzano Platform Operato
 1. Copy the following command and paste it in the *Cloud Shell* to run it.
 
     ```bash
-    <copy>https://github.com/verrazzano/verrazzano/releases/download/v1.1.0/operator.yaml</copy>
+    <copy>kubectl apply -f https://github.com/verrazzano/verrazzano/releases/download/v1.1.0/operator.yaml</copy>
     ```
     The output should be similar to the following:
     ```bash
@@ -136,7 +136,7 @@ An ingress controller is something that helps provide access to Docker container
 
     The output should be similar to the following:
     ```bash
-    $ $ kubectl apply -f - <<EOF
+    $ kubectl apply -f - <<EOF
     apiVersion: install.verrazzano.io/v1alpha1
     kind: Verrazzano
     metadata:
@@ -153,7 +153,7 @@ An ingress controller is something that helps provide access to Docker container
 2. To verify the successful installation, copy the following command and paste it in the *Cloud Shell*. It checks for the condition, if *InstallComplete* condition is met, and notifies you. Here *my-verrazzano* is the name of the *Verrazzano Custom Resource*.
 
     ```bash
-    <copy>$ kubectl wait --timeout=20m --for=condition=InstallComplete verrazzano/example-verrazzano</copy>
+    <copy>kubectl wait --timeout=20m --for=condition=InstallComplete verrazzano/example-verrazzano</copy>
     ```
 
     The output should be similar to the following:
