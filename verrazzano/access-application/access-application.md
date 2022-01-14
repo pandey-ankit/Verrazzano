@@ -31,7 +31,7 @@ In this lab, you will:
 
    The output should be similar to the following:
       ```bash
-         kubectl get service \
+         $ kubectl get service \
          > -n "istio-system" "istio-ingressgateway" \
          > -o jsonpath={.status.loadBalancer.ingress[0].ip}; echo
          XX.XX.XX.XX

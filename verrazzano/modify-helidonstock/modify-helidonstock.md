@@ -179,7 +179,7 @@ You should have a text editor, where you can paste the commands and URLs and mod
 7. Now you have both the Tenancy Namespace and Endpoint for your region. Copy the following command and paste it in your text editor. Then replace the `END_POINT_OF_YOUR_REGION` with the endpoint of your region name and `NAMESPACE_OF_YOUR_TENANCY` with your tenancy's namespace.
 
     ```bash
-    <copy>docker build --force-rm=true -f Dockerfile -t `END_POINT_OF_YOUR_REGION`/`NAMESPACE_OF_YOUR_TENANCY`/helidon-stock-application:1.0 .</copy>
+    <copy>docker build --force-rm=true -f Dockerfile -t END_POINT_OF_YOUR_REGION/NAMESPACE_OF_YOUR_TENANCY/helidon-stock-application:1.0 .</copy>
     ```
 
     ![Docker Build](images/18.png " ")
