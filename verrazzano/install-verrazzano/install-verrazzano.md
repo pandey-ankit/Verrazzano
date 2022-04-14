@@ -1,8 +1,10 @@
-# Install Verrazzano on a Kubernetes Cluster in the Oracle Cloud Infrastructure (OCI)
+# Install Verrazzano
 
 ## Introduction
 
 This lab walks you through the steps to install Verrazzano on a Kubernetes cluster in the Oracle Cloud Infrastructure.
+
+Estimated time: 20 minutes
 
 ### About Product/Technology
 
@@ -122,7 +124,7 @@ In this lab, we are going to install the *development profile of Verrazzano*, wh
 
 The following image describes the Verrazzano components that are installed with each profile.
 
-![Verrazzano Profile](images/4.png " ")
+![Verrazzano Profile](images/verrazzanoprofile.png " ")
 
 According to our DNS choice, we can use nip.io (wildcard DNS) or [Oracle OCI DNS](https://docs.cloud.oracle.com/en-us/iaas/Content/DNS/Concepts/dnszonemanagement.htm). In this lab, we are going to install using nip.io (wildcard DNS).
 
@@ -218,4 +220,4 @@ Leave the *Cloud Shell* open; we need it for Lab 3.
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Kamryn Vinson, January 2022
+* **Last Updated By/Date** - Ankit Pandey, April 2022
