@@ -260,7 +260,7 @@ Please copy and paste the block of commands into the *Cloud Shell*.
     ```bash
     <copy>
     export WLS_USERNAME=weblogic
-    export WLS_PASSWORD=$((< /dev/urandom tr -dc 'A-Za-z0-9"'''*+,-.<=>' | head -c10);(date +%S))
+    export WLS_PASSWORD=$((< /dev/urandom tr -dc 'A-Za-z0-9"'\''*+,-./:;<=>?\^_`|~' | head -c10);(date +%S))
     echo $WLS_PASSWORD
     kubectl create secret generic bobbys-front-end-weblogic-credentials --from-literal=password=$WLS_PASSWORD --from-literal=username=$WLS_USERNAME -n bobs-books
     kubectl create secret generic bobs-bookstore-weblogic-credentials --from-literal=password=$WLS_PASSWORD --from-literal=username=$WLS_USERNAME -n bobs-books
@@ -269,7 +269,7 @@ Please copy and paste the block of commands into the *Cloud Shell*.
         --from-literal=password=$WLS_PASSWORD \
         --from-literal=url=jdbc:mysql://mysql.bobs-books.svc.cluster.local:3306/books \
         -n bobs-books
-    cd ~ 
+    cd ~
     </copy>
     ```
     ![Create Resource](images/createresource.png " ")
