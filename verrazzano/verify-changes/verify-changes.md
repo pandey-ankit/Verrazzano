@@ -56,7 +56,7 @@ In this lab, you will:
 2. In Lab4, if you saved the password for the Verrazzano Console, you can use it to log in to the Verrazzano Console. Otherwise, run the following command in the *Cloud Shell* to get the password and paste it in your text editor.
 
     ```bash
-    <copy>$ kubectl get secret --namespace verrazzano-system verrazzano -o jsonpath={.data.password} | base64 --decode; echo</copy>
+    <copy>kubectl get secret --namespace verrazzano-system verrazzano -o jsonpath={.data.password} | base64 --decode; echo</copy>
     ```
 
     ![Verrazzano Password](images/verrazzanopassword.png " ")
