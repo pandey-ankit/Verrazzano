@@ -248,18 +248,19 @@ Also we need to make Verrazzano aware that we store in that namespace Verrazzano
     <copy>
     curl -LSs https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/multicloud/verrazzano/deploy-bobsbook/create_secret.sh >~/create_secret.sh
     chmod 777 create_secret.sh
-    ./create_secret.sh username password    
+    ./create_secret.sh username 'password'    
     </copy>
     ```
-
     ![Create Secret](images/createsecret.png " ")
+    > Please enter the password in single quotes.
+   
 
 4. We need to create several Kubernetes secrets with credentials.  In the Bobby's Books application, we have two WebLogic domains *bobby-front-end* and *bobs-bookstore*. The credentials for the WebLogic domain are kept in a Kubernetes Secret where the name of the secret is specified using *webLogicCredentialsSecret* in the WebLogic Domain resource. Also, the domain credentials secret must be created in the namespace where the domain will be running. We need to create the secrets called *bobbys-front-end-weblogic-credentials* and *bobs-bookstore-weblogic-credentials* used by WebLogic Server domains, with a user name value of `weblogic` and a password which is randomly generated in the bobs-books namespace. Our Bobby's Books application uses a *mysql* database. So, we create a new secret called  *mysql-credentials*, with a user name value of `weblogic`, a password which is randomly generated,  and  JDBC URL, *jdbc:mysql://mysql.bobs-books.svc.cluster.local:3306/books* in the bobs-books namespace. We will use this values in the JDBC connection string in WebLogic DataSource object.
 Please copy and paste the block of commands into the *Cloud Shell*.
     ```bash
     <copy>
     export WLS_USERNAME=weblogic
-    export WLS_PASSWORD=$((< /dev/urandom tr -dc 'A-Za-z0-9!"#$%&'\''*+,-./:;<=>?@\^_`|~' | head -c10);(date +%S))
+    export WLS_PASSWORD=$((< /dev/urandom tr -dc 'A-Za-z0-9"'''*+,-.<=>' | head -c10);(date +%S))
     echo $WLS_PASSWORD
     kubectl create secret generic bobbys-front-end-weblogic-credentials --from-literal=password=$WLS_PASSWORD --from-literal=username=$WLS_USERNAME -n bobs-books
     kubectl create secret generic bobs-bookstore-weblogic-credentials --from-literal=password=$WLS_PASSWORD --from-literal=username=$WLS_USERNAME -n bobs-books
@@ -351,28 +352,28 @@ Verify that the application configuration, domains, Coherence resources, and ing
 
 5. Verify that the service pods are successfully created and transition to the *Running* state. Note that this may take a few minutes and that you may see some of the services terminate and restart. Finally, you will observe all the pods associated with the bobs-books namespace are in the *Running* Status. Please copy the pods details for the *bobbys-helidon-stock-application*.
 
-```bash
-<copy>kubectl get pods -n bobs-books</copy>
-```
+    ```bash
+    <copy>kubectl get pods -n bobs-books</copy>
+    ```
 
-```bash
-$ kubectl get pods -n bobs-books
-NAME                                            READY    STATUS    RESTARTS   AGE
-bobbys-coherence-0                               2/2     Running   0          7m51s
-bobbys-front-end-adminserver                     4/4     Running   0          5m28s
-bobbys-front-end-managed-server1                 4/4     Running   0          4m30s
-bobbys-helidon-stock-application-5f74cbc-cw4x4   2/2     Running   0          7m54s
-bobs-bookstore-adminserver                       4/4     Running   0          4m31s
-bobs-bookstore-managed-server1                   4/4     Running   0          3m41s
-mysql-6bc8f9f785-n4qjh                           2/2     Running   0          5m52s
-robert-helidon-65b8874988-7x5vj                  2/2     Running   0          7m53s
-robert-helidon-65b8874988-vnntp                  2/2     Running   0          7m54s
-roberts-coherence-0                              2/2     Running   0          7m52s
-roberts-coherence-1                              2/2     Running   0          7m51s
-$
-```
+    ```bash
+    $ kubectl get pods -n bobs-books
+    NAME                                            READY    STATUS    RESTARTS   AGE
+    bobbys-coherence-0                               2/2     Running   0          7m51s
+    bobbys-front-end-adminserver                     4/4     Running   0          5m28s
+    bobbys-front-end-managed-server1                 4/4     Running   0          4m30s
+    bobbys-helidon-stock-application-5f74cbc-cw4x4   2/2     Running   0          7m54s
+    bobs-bookstore-adminserver                       4/4     Running   0          4m31s
+    bobs-bookstore-managed-server1                   4/4     Running   0          3m41s
+    mysql-6bc8f9f785-n4qjh                           2/2     Running   0          5m52s
+    robert-helidon-65b8874988-7x5vj                  2/2     Running   0          7m53s
+    robert-helidon-65b8874988-vnntp                  2/2     Running   0          7m54s
+    roberts-coherence-0                              2/2     Running   0          7m52s
+    roberts-coherence-1                              2/2     Running   0          7m51s
+    $
+    ```
 
-> Note the pod name for **bobbys-helidon-stock-application**. When we redeploy this component, you will notice that this pod will go into a *Terminating* status and new pod will start and come in the *Running* state in Lab 7.
+    > Note the pod name for **bobbys-helidon-stock-application**. When we redeploy this component, you will notice that this pod will go into a *Terminating* status and new pod will start and come in the *Running* state in Lab 7.
 
 Leave the *Cloud Shell* open; we will use it for the next labs as well.
 

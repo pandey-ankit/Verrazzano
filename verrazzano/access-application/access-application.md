@@ -70,11 +70,11 @@ In this lab, you will:
       <copy>https://bobs-books.bobs-books.XX.XX.XX.XX.nip.io/bobbys-front-end/</copy>
       ```
 
-   ![Bobbys URL](images/bobbysurl.png " ")
+      ![Bobbys URL](images/bobbysurl.png " ")
 
-   ![Bobby bookstore](images/bobbysbookstore.png " ")
+      ![Bobby bookstore](images/bobbysbookstore.png " ")
 
-   > Leave this page open  because we will use it in Lab 8.
+      > Leave this page open  because we will use it in Lab 8.
 
 6. To open the Bobby's Book Order Manager UI, open a new tab and copy the following URL and replace *XX.XX.XX.XX* with your *EXTERNAL_IP* address as shown in the following image.
 
