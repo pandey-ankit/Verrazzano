@@ -91,11 +91,10 @@ In this lab, you will:
 
     ![Grafana link](images/grafanahome.png " ")
 
-3. Select Home, as shown, type *Helidon*, and then select *Helidon Monitoring Dashboard*.
+3. Select *Home*, type *Helidon*, and then select *Helidon Monitoring Dashboard*.
 
     ![Search Helidon](images/helidon.png " ")
 
-    ![Helidon Dashboard](images/helidondashboard.png " ")
 
 4. In the ServiceID, select *bobs-books_default_bobs-books_bobby-helidon* and in the instance, select the newly created instance. In this case, you will get information for the modified *bobby-helidon-stock-application*.
 
