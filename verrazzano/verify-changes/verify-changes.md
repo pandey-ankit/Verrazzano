@@ -89,11 +89,11 @@ In this lab, you will:
 
 2. Select the link for Grafana to open the *Grafana Console*.
 
-    ![Grafana link](images/grafanalink.png " ")
+    ![Grafana link](images/grafanahome.png " ")
 
 3. Select Home, as shown, type *Helidon*, and then select *Helidon Monitoring Dashboard*.
 
-    ![Search Helidon](images/searchhelidon.png " ")
+    ![Search Helidon](images/helidon.png " ")
 
     ![Helidon Dashboard](images/helidondashboard.png " ")
 
@@ -107,4 +107,4 @@ Congratulations! You have successfully completed the labs.
 
 * **Author** -  Ankit Pandey
 * **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Last Updated By/Date** - Ankit Pandey, May 2022
