@@ -226,8 +226,8 @@ We need to download the source code, where we have configuration files, `bobs-bo
 
     ```bash
     <copy>
-    curl -LSs  https://raw.githubusercontent.com/verrazzano/verrazzano/v1.2.1/examples/bobs-books/bobs-books-app.yaml >~/bobs-books-app.yaml
-    curl -LSs https://raw.githubusercontent.com/verrazzano/verrazzano/v1.2.1/examples/bobs-books/bobs-books-comp.yaml >~/bobs-books-comp.yaml
+    curl -LSs  https://raw.githubusercontent.com/verrazzano/verrazzano/v1.3.2/examples/bobs-books/bobs-books-app.yaml >~/bobs-books-app.yaml
+    curl -LSs https://raw.githubusercontent.com/verrazzano/verrazzano/v1.3.2/examples/bobs-books/bobs-books-comp.yaml >~/bobs-books-comp.yaml
     cd ~
     </copy>
     ```
@@ -246,7 +246,7 @@ Also we need to make Verrazzano aware that we store in that namespace Verrazzano
 
     ```bash
     <copy>
-    curl -LSs https://raw.githubusercontent.com/oracle/learning-library/master/developer-library/multicloud/verrazzano/deploy-bobsbook/create_secret.sh >~/create_secret.sh
+    curl -LSs https://oracle-livelabs.github.io/multicloud/verrazzano/deploy-bobsbook/create_secret.sh >~/create_secret.sh
     chmod 777 create_secret.sh
     ./create_secret.sh username 'password'    
     </copy>
