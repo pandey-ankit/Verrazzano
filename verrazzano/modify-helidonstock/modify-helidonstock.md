@@ -190,12 +190,12 @@ You should have a text editor, where you can paste the commands and URLs and mod
  
     > For example, in my case the command is `docker build --force-rm=true -f Dockerfile -t iad.ocir.io/tenancynamespace/helidon-stock-application-ankit`.
 
-This creates the Docker image, which we will push into the Oracle Cloud Container Registry repository in Lab 6. You need to copy the replaced full image name **`END_POINT_OF_YOUR_REGION/NAMESPACE_OF_YOUR_TENANCY/helidon-stock-application-your_first_name:1.0`**  in your text editor.In Lab 6, when you will need to create the repository, you need to give it name **`helidon-stock-application-your_first_name`**.
+    This creates the Docker image, which we will push into the Oracle Cloud Container Registry repository in Lab 6. You need to copy the replaced full image name **`END_POINT_OF_YOUR_REGION/NAMESPACE_OF_YOUR_TENANCY/helidon-stock-application-your_first_name:1.0`**  in your text editor.In Lab 6, when you will need to create the repository, you need to give it name **`helidon-stock-application-your_first_name`**.
 
-Leave the *Cloud Shell* open; we need it for next lab.
+    Leave the *Cloud Shell* open; we need it for next lab.
 
 ## Acknowledgements
 
 * **Author** -  Ankit Pandey
-* **Contributors** - Maciej Gruszka, Peter Nagy
-* **Last Updated By/Date** - Ankit Pandey, April 2022
+* **Contributors** - Maciej Gruszka, Sid Joshi
+* **Last Updated By/Date** - Ankit Pandey, January 2023
